@@ -1,1 +1,18 @@
+#!/bin/bash
 
+# Create streamlit config directory
+mkdir -p ~/.streamlit/
+
+# Create credentials file
+echo "\
+[general]\n\
+email = \"\"\n\
+" > ~/.streamlit/credentials.toml
+
+# Create config file
+echo "\
+[server]\n\
+headless = true\n\
+enableCORS = false\n\
+port = $PORT\n\
+" > ~/.streamlit/config.toml
